@@ -1,5 +1,6 @@
 1.structure說明
 由4個FA組成
+delay為2T*4 = 8T
 
 2. verilog說明
 verilog1: RCA4，創4個FA串接在一起

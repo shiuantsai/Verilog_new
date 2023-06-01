@@ -1,0 +1,7 @@
+#!/bin/csh -f
+#xrun sv_file/tb_dut1.sv sv_file/dut1.sv sv_file/full.sv sv_file/empty.sv \
+xrun rtl/fsm_traffic_light.v rtl/tim_tb.v \
+  -clean \
+  -debug_opts indago_interactive \
+  -access +rwc \
+  -input input.tcl

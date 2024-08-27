@@ -1,10 +1,12 @@
-1. CSA概念是將3個數相加變成兩個數相加，也就是carry+sum.
+CSA概念:
+是將3個數相加變成兩個數相加，也就是carry+sum.
 
-2. structure
+structure:
 ![image](https://github.com/user-attachments/assets/0aa42c3f-df1e-447f-9594-3a5618254571)
 
 
-3. verilog
+Verilog:
+
 // reference site: https://verilogcodes.blogspot.com/2017/11/verilog-code-for-carry-save-adder-with-testbench.html
 
 module CSA

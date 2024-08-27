@@ -19,3 +19,13 @@ fulladder fa_inst22(s1[3],c1[2],c2[2],s[3],c2[3]);
 fulladder fa_inst23(1'b0,c1[3],c2[3],s[4],cout); 
 
 assign s[0] = s1[0];
+
+module fulladder
+        (   input a,b,cin,
+            output sum,carry
+            );
+
+assign sum = a ^ b ^ cin;
+assign carry = (a & b) | (cin & b) | (a & cin);
+
+endmodule

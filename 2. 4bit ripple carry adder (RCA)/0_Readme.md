@@ -2,6 +2,8 @@
 由4個FA組成
 delay為2T*4 = 8T
 
+![image](https://github.com/user-attachments/assets/ba322aa6-f8f6-4ec5-87a6-116b1bf888a7)
+
 
 2. verilog說明
 verilog1: RCA4，創4個FA串接在一起

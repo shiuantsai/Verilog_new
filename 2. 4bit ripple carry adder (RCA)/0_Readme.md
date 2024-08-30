@@ -7,11 +7,9 @@ delay為2T*4 = 8T
 
 2. verilog說明
 verilog1: RCA4，創4個FA串接在一起
-verilog2: FA
-verilog3: RCA4第二種寫法
 
 3. testbench說明
-tim_tb: 給值abCin，其中Cin為0，因為一開始必為0
+tim_tb: 給值a,b,Cin，其中第一個bit相加時Cin必為0。
 
 4. waveform
 - 可以看到 A跟B加起來等於S 值都是正確的。

@@ -1,7 +1,7 @@
 CSA概念:
 是將3個數相加變成兩個數相加，也就是carry+sum.
 
-CSA概念 reference site:
+reference site:
 https://zhuanlan.zhihu.com/p/102387648
 
 verilog reference site: 

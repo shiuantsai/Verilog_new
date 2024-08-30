@@ -9,4 +9,5 @@ FSM
 
 
 waveform
+![image](https://github.com/user-attachments/assets/4a547c50-8610-463d-8de8-e2785116eae4)
 

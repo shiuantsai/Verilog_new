@@ -15,3 +15,4 @@ tim_tb: 給值a,b,Cin，其中第一個bit相加時Cin必為0。
 - 可以看到 A跟B加起來等於S 值都是正確的。
 - 也可以看到當A=h'1, B=h'8時，會進位三次。
 - 也可以看到當A=h'1, B=h'F時，會有最高位溢位情況，所以Cout=0
+![image](https://github.com/user-attachments/assets/7758eb2e-0b30-4b36-91a2-0635b2518f7a)

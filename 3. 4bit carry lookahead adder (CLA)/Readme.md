@@ -17,3 +17,4 @@ A = 4'b1011, B = 4'b0111
 A = 4'b0001, B = 4'b1110
 
 4. waveform
+![image](https://github.com/user-attachments/assets/16a5e77c-6240-4ca0-9920-4c8290809c0a)

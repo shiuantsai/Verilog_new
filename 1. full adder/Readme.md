@@ -1,4 +1,6 @@
-1. structure說明
+structure
+
+1. 化簡前
 Cout 跟 Sum is from truth table
 delay為2T
 

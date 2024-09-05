@@ -1,4 +1,4 @@
-題目參考天璇影片: #8  優先序編碼器 Priority Encoder
+題目參考天璇影片: #10  優先序編碼器 Priority Encoder
 
 https://www.youtube.com/watch?v=lwepW34gvtk&list=PLkH9pBMaZuHQ0_P26d8ctZSd9trPajCmI&index=15
 

@@ -11,7 +11,7 @@ module average (
 reg [9:0] count;
 reg [17:0] sum;
 reg calculating;
-
+//calculating要有，原因是讓calculating去卡start。假設start突然敲 但是calculating還是為1 所以start沒用
 always@(posedge clk or negedge rst_n) begin
   if (!rst_n) begin 
     calculating <= 1'd1;

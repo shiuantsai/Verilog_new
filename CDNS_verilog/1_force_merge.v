@@ -81,3 +81,61 @@ always@(posedge clk or negedge rst_b) begin
    end
 end
 endmodule
+
+
+
+### COS article
+Problem:
+
+Users always attempt to write an ICG with same "if conditional". They expect 
+
+solution:
+
+setting below attribute before syn_gen
+
+set_db lp_clock_gating_force_sena  true  
+
+
+
+Example:
+
+module cg_insert (
+  input clk, 
+  input rst_b,
+  input in1, 
+  input in2,
+  input [15:0] data_final,
+  output reg [15:0] out
+);
+always@(posedge clk or negedge rst_b) begin
+  if (~rst_b) begin
+    out[15:0] <= {16{1'b0}};
+  end
+  else begin
+    if (in1 || (in1==0 && in2==0)) begin
+      out[0] <= (in1)?   {data_final[0]}  : {{out[3]}};
+      out[1] <= (in1)?   {data_final[1]}  : {{out[3]}};
+      out[2] <= (in1)?   {data_final[2]}  : {{out[3]}};
+      out[3] <= (in1)?   {data_final[3]}  : {{out[3]}};
+      out[4] <= (in1)?   {data_final[4]}  : {{out[7]}};
+      out[5] <= (in1)?   {data_final[5]}  : {{out[7]}};
+      out[6] <= (in1)?   {data_final[6]}  : {{out[7]}};
+      out[7] <= (in1)?   {data_final[7]}  : {{out[7]}};
+      out[8] <= (in1)?   {data_final[8]}  : {{out[11]}};
+      out[9] <= (in1)?   {data_final[9]}  : {{out[11]}};
+      out[10] <= (in1)? {data_final[10]}  : {{out[11]}};
+      out[11] <= (in1)? {data_final[11]}  : {{out[11]}};
+      out[12] <= (in1)? {data_final[12]}  : {{out[15]}};
+      out[13] <= (in1)? {data_final[13]}  : {{out[15]}};
+      out[14] <= (in1)? {data_final[14]}  : {{out[15]}};
+      out[15] <= (in1)? {data_final[15]}  : {{out[15]}};
+    end 
+   end
+end
+endmodule
+
+
+
+1. The default behavior of the tool is that out[3], out[7], out[11], out[15] will be gated by the same CG, while the other FFs will be gated by a different CG.
+
+2. Afte enable attribute "lp_clock_gating_force_sena  true". We can see out[0] to out[15] will be gated by the same CG

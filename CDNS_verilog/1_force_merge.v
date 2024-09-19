@@ -33,7 +33,7 @@ endmodule
 #out[0] chanaged condition -> valid==1 || (valid==0 && last ==0)
 
 #那我們是不是可以改成相同if條件，不管PPA(power)直接將FF用相同CG給merge起來。
-# RD最後給了一個force_same_cond_enable attribute (setting before elab)
+#RD最後給了hidden attribute: lp_clock_gating_force_sena (setting before syn_gen)
 #解法如下
 if (valid==1 || (valid==0 && last==0)) begin
   out [3] <= valid? in[3] : out[3]
